@@ -111,7 +111,41 @@ svg {
   max-width: 100%;
   height: auto;
 }
+/*=============== THEME ===============*/
+.change-theme{
+  position: absolute;
+  top: 1.1rem;
+  right: 5rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: .3s;
+}
 
+.change-theme:hover{
+  color: var(--first-color);
+}
+
+/*=============== Variables Light theme ===============*/
+body.dark-theme{
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 12%, 45%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+}
+
+/*=============== 
+        Color changes in some parts of
+        the website, in Light theme
+=================*/
+.dark-theme .academics__card{
+  background-color: aliceblue;
+  color: var(--title-color);
+}
+
+.dark-theme .contact__input{
+  background-color: aliceblue;
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
@@ -218,6 +252,7 @@ svg {
   top: 1rem;
   right: 1.5rem;
 }
+
 
 /* Show menu */
 .show-menu{
@@ -346,7 +381,7 @@ svg {
 }
 
 .about__description{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about__image{
@@ -653,13 +688,19 @@ margin-top: 2rem;
 
   .skills__content{
     grid-template-columns: max-content;
-   row-gap: 1rem;
+    row-gap: 1rem;
+    margin-left: 0.75rem;
   }
 
   .academics__card{
      padding-block: 1.5rem;
   }
 }
+
+.footer__social{
+  column-gap: 1.5rem;
+}
+
 
 
 /* For medium devices */
